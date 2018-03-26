@@ -39,11 +39,7 @@ def run_simulation(policy, initial_budget, initial_num_stocks, prices, hist, deb
     num_stocks = initial_num_stocks
     share_value = 0
     transitions = list()
-    '''
-    # Save training model constant
-    save_iterations = 100
-    saver = tf.train.Saver()
-'''
+
 
 
     # run i times iterations steps to go all the way through the prices matrix
@@ -193,14 +189,6 @@ class QLearningDecisionPolicy(DecisionPolicy):
         self.q = tf.nn.leaky_relu(tf.matmul(h1, W2) + b2)
         
     
-        '''
-        W1 = tf.Variable(tf.random_normal([input_dim, self.h1_dim]))
-        b1 = tf.Variable(tf.constant(0.1, shape=[self.h1_dim]))
-        h1 = tf.nn.relu(tf.matmul(self.x, W1) + b1)
-        W2 = tf.Variable(tf.random_normal([self.h1_dim, self.output_dim]))
-        b2 = tf.Variable(tf.constant(0.1, shape=[self.output_dim]))
-        self.q = tf.nn.relu(tf.matmul(h1, W2) + b2)
-        '''
 
         loss = tf.square(self.y - self.q)
         self.train_op = tf.train.GradientDescentOptimizer(0.000001).minimize(loss)
