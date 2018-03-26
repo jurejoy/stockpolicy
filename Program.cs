@@ -14,8 +14,8 @@ namespace sendtest
     class Program
     {
         private static EventHubClient eventHubClient;
-        //private const string EhConnectionString = "Endpoint=sb://stockrenjie.servicebus.windows.net/;SharedAccessKeyName=stock;SharedAccessKey=4KqpkGXmE/NBv+7QehWY8lj1rh2xiJsZMbmWaLmOiy0=;EntityPath=stock";
-        private const string EhConnectionString = "Endpoint=sb://stockrenjie.servicebus.chinacloudapi.cn/;SharedAccessKeyName=root;SharedAccessKey=xG9Iw/NPJGXHfo9yvmWBoAk6AVkWEWBmgo07t2pz4Mg=;EntityPath=stock";
+       
+        private const string EhConnectionString = "Endpoint=sb://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
         private const string EhEntityPath = "stock";
 
         static void Main(string[] args)
